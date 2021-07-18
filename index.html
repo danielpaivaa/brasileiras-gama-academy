@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Desafio Gama Academy" />
+    <meta name="author" content="Daniel Paiva" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Inclusão de arquivo CSS-->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!--Inclusão de arquivo JS-->
+    <script  type="module" src="countdown.js"></script>
+    <title>Brasileiras | Gama Academy</title>
+</head>
+
+<body>
+    <header>
+        <div class="textoLogo">brasileiras</div>
+        <div class="imgSalve">
+            <img src="imagens/salve.png" />
+        </div>
+        <div class="icnoesCabecalho">
+            <a href="https://www.linkedin.com/in/daniel-araujo-paiva/" title="Linkedin" target="_blank"
+                class="linklinkedin">
+                <img class="iconeLinkedin" src="imagens/linkedin.png" />
+            </a>
+            <a href="https://github.com/danpaiva9" title="Github" target="_blank">
+                <img class="iconeGit" src="imagens/github.png" />
+            </a>
+        </div>
+    </header>
+    <main>
+        <section class="section1">
+            <div id="slider">
+                <img class="selected" src="imagens/banner1.png" alt="Imagem1" />
+                <img src="imagens/banner2.png" alt="Imagem2" />
+                <img src="imagens/banner3.png" alt="Imagem3" />
+                <img src="imagens/banner4.png" alt="Imagem4" />
+                <img src="imagens/banner5.png" alt="Imagem5" />
+                <img src="imagens/banner6.png" alt="Imagem6" />
+                <img src="imagens/banner7.png" alt="Imagem7" />
+                <img src="imagens/banner8.png" alt="Imagem8" />
+                <img src="imagens/banner9.png" alt="Imagem9" />
+                <img src="imagens/banner10.png" alt="Imagem10" />
+                <img src="imagens/banner11.png" alt="Imagem11" />
+                <img src="imagens/banner12.png" alt="Imagem12" />
+            </div>
+            <script type="text/Javascript" src="script.js"></script>
+
+        </section>
+
+        <section class="section2">
+            <div class="textoDestaque">
+                <h2>categorias em destaque</h2>
+            </div>
+            <div class="imgDestaques">
+                <a href="https://i.pinimg.com/originals/2c/09/dc/2c09dcfd1de98e5d89cd00f860db828d.png" target="_blank">
+                  <img id="destaque"src="imagens/eletrodomesticos.png"  title="Eletrtodomesticos"/>
+                </a>
+                <a href="https://pics.me.me/vendo-notebook-da-apple-original-15512601.png" target="_blank">
+                    <img id="destaque" src="imagens/notebooks.png"  title="Notebooks"/>
+                </a>
+                <a href="https://img.r7.com/images/produtos-bizarros-brasileiros-internet-24052018101133281?dimensions=866x960" target="_blank">
+                    <img id="destaque" src="imagens/tvs.png"  title="TV's"/>
+                </a>
+                <a href="https://i.pinimg.com/originals/dd/1d/fe/dd1dfee2678b2e205eab08f95486c383.jpg" target="_blank">
+                    <img id="destaque" src="imagens/smartphones.png" title="Smartphones" />
+                </a>
+                <a href="https://preview.redd.it/5n00on6rcut41.jpg?auto=webp&s=ada58f814f6f0e8957ed942e254ad0cb56163fa8" target="_blank">
+                    <img id="destaque" src="imagens/esporte.png" title="Esportes" />
+                </a>
+           
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="cardContainer">
+            <div class="textoCadastro">
+                <img id="iconEmail" src="imagens/email.ico" />
+                Cadastre-se aqui para receber ofertas exclusivas da Black Friday
+            </div>
+            <form action="#" class="formCadastro">
+                <div class="cardNome">
+                    <input type="text" id="campoNome" placeholder="Digite seu nome" title="Digite seu nome"/>
+                </div>
+                <div class="cardEmail">
+                    <input type="email" id="campoEmail" placeholder="Digite seu e-mail" title="Digite sei e-mail"/>
+                </div>
+                <div class="cardButton">
+                    <input type="button" onclick="cadastroEmail()" value="Cadastrar" id="campoButton" title="Click para se cadastrar"/>
+                </div>
+
+            </form>
+        </div>
+        
+        <div class="contagemRegressiva">
+            <span id="textSuperior">Restam</span>
+            <div class="countdown">
+                <div>
+                    <span data-time></span>
+                </div>
+
+                <div class="cont">d</div>
+
+                <div>
+                    <span data-time></spam>
+                </div>
+
+                <div class="cont">h</div>
+
+                <div>
+                    <span data-time></span>
+                </div>
+
+                <div class="cont">m</div>
+                <div>
+                    <span data-time></span>
+                </div>
+                <div class="cont">s</div>
+            </div>
+            <span id="textSuperior">para a BLACK FRIDAY!</span>
+        </div>
+        
+    </footer>
+</body>
+
+</html>
