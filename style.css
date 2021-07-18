@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 @import url("http://db.onlinewebfonts.com/c/85c65430b93c7fed88d053861382678b?family=M+Ying+Hei+PRC");
  
-body{
+body {
     background-color: rgb(234, 234, 234);
     font-family: 'Quicksand', sans-serif;
     color: #fff;
@@ -11,103 +11,126 @@ body{
    --Verde: rgb(0, 155, 58);
    --Amarela: rgb(245, 223, 0);
    --Azul: rgb(0, 39, 118);
-   --Border: solid 2px red;
 }
 
-*{
+* {
     margin: 0;
 }
 
-.linklinkedin{
-    color: rgba(0, 0, 0, 0);
+a {
+    text-decoration: none;
 }
 
-header{
-    display: flex;
-    align-items: center;
-    justify-content: center
-    ;
-    background-color: var(--Verde);
-    width: 100%;
-    max-width: 100%;
-    height: 8vw;
-    max-height: 300px;
-    position: relative;
-}
-
-
-footer{
+header {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    
     background-color: var(--Verde);
     width: 100%;
-    max-width: 100%;
-    height: 20vw;
-    max-height: 300px;
-    position: relative;
-}
-
-
-.imgSalve{
-    display: flex;
-    width: 336px;
-    height: 100%;
-}
-
-.icnoesCabecalho{ 
-    right: 75px;
-    position: absolute;
-
+    height: 120px;
 }
 
 .textoLogo{
+    width: 30%;
     color: rgb(255, 255, 255);
     font-size: 40px;
     text-shadow: 1px 1px rgb(0, 0, 0);
-    left: 75px;
-    /*font-family: 'Coolvetica-Regular', arial;*/
     font-family: "M Ying Hei PRC", arial;
     text-decoration: overline underline;
+    width: 30%;
+    margin-left: 2rem;
+}
+
+.containerSalve {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.imgSalve{
+    display: flex;
+    width: auto;
+    height: 100%;
+}
+
+.icnoesCabecalho{
+    text-align: end;
+    width: 30%;
+    margin-right: 2rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 100vw;
+}
+
+section {
+    height: 320px;
+
+    margin: 15px;
+}
+
+.section1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;   
+
+    margin-bottom: 45px;
+    border: var(--Border);
+}
+
+/* CSS BANNER */
+#slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#slider img{
+    opacity: 0;
+
     position: absolute;
 
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    transition: opacity 1000ms;
 }
 
-.section1{
-    display: flex;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    max-height: 300px;
-    position: relative;
-    
+#slider img.selected { 
+    opacity: 1;
 }
-.section2{
+
+.section2 {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 100%;
+
     color: rgb(102, 102, 102);
-    
+    border: var(--Border);
 }
+
+.section2 .textoDestaque {
+    padding: 0 1.5rem;
+}
+
 .imgDestaques{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 99%;
+    width: 100%;
     height: 100%;
-    margin-bottom: 10px;
-
 }
+
 #destaque{
     width: 200px;
     height: 235px;
-
-}
-.textoDestaque{
-    margin-top: 25px;
-    margin-left: 38px;
-
 }
 
 .textoCadastro{
@@ -128,7 +151,6 @@ footer{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    
 }
 
 .cardContainer{
@@ -137,9 +159,7 @@ footer{
     justify-content: center;
     height: 98%;
     width: 400px;
-    max-width: 100%;
-    max-height: 100%;
-    position: relative;    
+    
 }
 
 #campoNome{
@@ -152,10 +172,12 @@ footer{
     font-weight: bold;
     padding-left: 10px;
 }
+
 #campoNome:hover{
     border: solid 1px var(--Amarela);
     
 }
+
 #campoNome::placeholder{
     color: rgba( 255, 255, 255, 0.9);
     text-shadow: 1px 1px rgba(0 0 0 /100%);
@@ -171,10 +193,11 @@ footer{
     font-weight: bold;
     padding-left: 10px;
 }
+
 #campoEmail:hover{
     border: solid 1px var(--Amarela);
-    
 }
+
 #campoEmail::placeholder{
     color: rgba( 255, 255, 255, 0.9);
     text-shadow: 1px 1px rgba(0 0 0 /100%);
@@ -211,20 +234,22 @@ footer{
 }
 
 /* CSS CONTAGEM REGRESSIVA */
-  .countdown {
+.countdown {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
     padding: 10px;
-  }
-  .countdown  {
+}
+
+.countdown  {
     color: #FFF;
     border-radius: 5px;
-    
+
     text-align: center;
-  }
-  .countdown  span {
+}
+
+.countdown  span {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -235,46 +260,71 @@ footer{
     font-style: normal;
     font-size: 35px;
     color: #fff;
-    
-  }
+}
 
-  .contagemRegressiva{
+.contagemRegressiva{
     height: 80%;
     width: 500px;
-    max-width: 100%;
-    max-height: 100%;
-    position: relative;
     text-align: center;
     font-size: 25px;
-  }
-  #textSuperior{
+}
+
+#textSuperior{
     font-weight: bold;
     font-size: 45px;
-  }
+}
 
-  /* CSS BANNER */
-  #slider {
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--Verde);
     width: 100%;
-    max-width: 100%;
-    height: 100vw;
-    max-height: 300px;
-    position: relative;
-    margin-top: 10px;
+    height: 350px;
 }
 
-#slider img{
-    opacity: 0;
+@media (max-width: 1000px){
+    .imgDestaques {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        position: relative;
+    }
 
-    position: absolute;
+    .section2 {
+        height: auto;
+    }
 
-    width: 100%;
-    height: 100%;
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        justify-content: center;
 
-    object-fit: contain;
+        gap: 2rem;
 
-    transition: opacity 1000ms;
+        padding: 2rem 0;
+    }
 }
 
-#slider img.selected { 
-    opacity: 1;
+@media(max-width: 840px){
+    header img.imgSalve{
+        display: none;
+    }
 }
+
+@media (max-width: 425px){
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+    }
+
+    .textoLogo, .icnoesCabecalho{
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+} 
